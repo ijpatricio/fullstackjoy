@@ -17,8 +17,16 @@ function default {
   help
 }
 
-function go {
-  plausible
+function secret:generate {
+  openssl rand -base64 64 | tr -d '\n' ; echo
+}
+
+function start {
+  docker compose up -d --remove-orphans
+}
+
+function stop {
+  docker compose down
 }
 
 TIMEFORMAT="Task completed in %3lR"
