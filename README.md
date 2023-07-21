@@ -1,5 +1,6 @@
 # Full Stack Joy
 
+
 Welcome.
 
 Chances are you heard of Docker, but never used it. It can seem complex to use as a developer, just many other concepts, but in fact, this repo is not about that.
