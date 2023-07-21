@@ -6,6 +6,18 @@
 - Prepare the `.env` file
 - Run the thing :)
 
+Run in base folder:
+```
+cp -R ./.services/plausible/* .
+cp -R ./.services/plausible/.env.example .env
+
+# Output a secret to put in .env
+openssl rand -base64 64 | tr -d '\n' ; echo
+```
+
+Finalize by setting missing `.env` variables 
+
+
 ### References:
 
 Reference: [Self Hosted Plausible Analytics](https://plausible.io/docs/self-hosting)
