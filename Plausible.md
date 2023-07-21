@@ -1,13 +1,5 @@
 ## Plausible Analytics
 
-### Installation
-
-- Copy the definition and support files, from the service.
-- Prepare the `.env` file
-- Run the thing :)
-
-### References:
-
 Reference: [Self Hosted Plausible Analytics](https://plausible.io/docs/self-hosting)
 
 Repository: [Plausible on GitHub](https://github.com/plausible/hosting)

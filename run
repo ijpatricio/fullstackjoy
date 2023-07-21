@@ -18,11 +18,13 @@ function default {
 }
 
 function install:service {
-  cp -Rp /.services/"$1"/* .
+  cp -R ./.services/"$1"/* .
+  cp -R ./.services/"$1"/.[^.]* .
 }
 
 function secret:generate {
-  output=$(openssl rand -base64 64 | tr -d '\n' ; echo) sed -i '' "s/^SECRET_KEY_BASE=.*/SECRET_KEY_BASE=$output/" .env
+  openssl rand -base64 64 | tr -d '\n' ; echo
+  output=$(openssl rand -base64 64 | tr -d '\n' ; echo) ; sed -i '' "s/^SECRET_KEY_BASE=.*/SECRET_KEY_BASE=$output/" .env
 }
 
 function start {
